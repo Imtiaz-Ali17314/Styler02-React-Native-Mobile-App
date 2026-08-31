@@ -13,10 +13,9 @@ const App = () => {
   const textColor = isDarkMode ? '#fff' : '#000';
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView>
       <ScrollView>
         <View>
-          <Text style={{ color: textColor }}>App</Text>
           <FlatCard />
         </View>
       </ScrollView>
@@ -26,15 +25,4 @@ const App = () => {
 
 export default App;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  whiteText: {
-    color: '#fff',
-  },
-  darkText: {
-    color: '#000',
-  },
-});
+const styles = StyleSheet.create({});
