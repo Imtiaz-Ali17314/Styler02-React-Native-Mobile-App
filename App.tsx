@@ -1,14 +1,25 @@
-import { StyleSheet, Text, useColorScheme, View } from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import FlatCard from './components/FlatCard';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
+  const textColor = isDarkMode ? '#fff' : '#000';
 
   return (
     <SafeAreaView style={styles.container}>
-      <View>
-        <Text style={isDarkMode ? styles.whiteText : styles.darkText}>App</Text>
-      </View>
+      <ScrollView>
+        <View>
+          <Text style={{ color: textColor }}>App</Text>
+          <FlatCard />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
