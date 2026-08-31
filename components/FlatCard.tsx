@@ -7,10 +7,19 @@ export default function FlatCard() {
 
   return (
     <View>
-      <Text style={[styles.headingText, { color: textColor }]}>Flat Card</Text>
+      <Text style={[styles.headingText, { color: textColor }]}>Flat Cards</Text>
+
       <View style={styles.container}>
         <View style={[styles.card, styles.card1]}>
           <Text style={[{ color: textColor }]}>Red</Text>
+        </View>
+
+        <View style={[styles.card, styles.card2]}>
+          <Text style={[{ color: textColor }]}>Green</Text>
+        </View>
+
+        <View style={[styles.card, styles.card3]}>
+          <Text style={[{ color: textColor }]}>Blue</Text>
         </View>
       </View>
     </View>
@@ -23,7 +32,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingHorizontal: 8,
   },
+
   container: {},
+
   card: {
     flex: 1,
     justifyContent: 'center',
@@ -33,7 +44,16 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     margin: 8,
   },
+
   card1: {
     backgroundColor: '#EF5354',
+  },
+
+  card2: {
+    backgroundColor: '#50DBB4',
+  },
+
+  card3: {
+    backgroundColor: '#5DA3FA',
   },
 });
