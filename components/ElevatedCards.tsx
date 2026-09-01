@@ -1,4 +1,5 @@
 import {
+  Image,
   ScrollView,
   StyleSheet,
   Text,
@@ -11,6 +12,69 @@ export default function ElevatedCards() {
   const isDarkMode = useColorScheme() === 'dark';
   const textColor = isDarkMode ? '#fff' : '#000';
 
+  const avatars = [
+    {
+      id: 1,
+      avatar: 'https://picsum.photos/seed/avatar1/200/200',
+    },
+    {
+      id: 2,
+      avatar: 'https://picsum.photos/seed/avatar2/200/200',
+    },
+    {
+      id: 3,
+      avatar: 'https://picsum.photos/seed/avatar3/200/200',
+    },
+    {
+      id: 4,
+      avatar: 'https://picsum.photos/seed/avatar4/200/200',
+    },
+    {
+      id: 5,
+      avatar: 'https://picsum.photos/seed/avatar5/200/200',
+    },
+    {
+      id: 6,
+      avatar: 'https://picsum.photos/seed/avatar6/200/200',
+    },
+    {
+      id: 7,
+      avatar: 'https://picsum.photos/seed/avatar7/200/200',
+    },
+    {
+      id: 8,
+      avatar: 'https://picsum.photos/seed/avatar8/200/200',
+    },
+    {
+      id: 9,
+      avatar: 'https://picsum.photos/seed/avatar9/200/200',
+    },
+    {
+      id: 10,
+      avatar: 'https://picsum.photos/seed/avatar10/200/200',
+    },
+    {
+      id: 11,
+      avatar: 'https://picsum.photos/seed/avatar11/200/200',
+    },
+    {
+      id: 12,
+      avatar: 'https://picsum.photos/seed/avatar12/200/200',
+    },
+    {
+      id: 13,
+      avatar: 'https://picsum.photos/seed/avatar13/200/200',
+    },
+    {
+      id: 14,
+      avatar: 'https://picsum.photos/seed/avatar14/200/200',
+    },
+    {
+      id: 15,
+      avatar: 'https://picsum.photos/seed/avatar15/200/200',
+    },
+  ];
+
   return (
     <View>
       <Text style={[styles.headingText, { color: textColor }]}>
@@ -18,41 +82,11 @@ export default function ElevatedCards() {
       </Text>
 
       <ScrollView style={styles.container} horizontal={true}>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap</Text>
-        </View>
-
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap</Text>
-        </View>
-
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap</Text>
-        </View>
-
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap</Text>
-        </View>
-
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap</Text>
-        </View>
-
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap</Text>
-        </View>
-
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap</Text>
-        </View>
-
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap</Text>
-        </View>
-
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>Tap</Text>
-        </View>
+        {avatars.map(({ id, avatar }) => (
+          <View key={id} style={[styles.card, styles.cardElevated]}>
+            <Image source={{ uri: avatar }} style={styles.cardImage} />
+          </View>
+        ))}
       </ScrollView>
     </View>
   );
@@ -75,8 +109,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     height: 100,
     width: 100,
-    borderRadius: 4,
+    borderRadius: 50,
+    borderWidth: 3,
+
+    borderColor: 'transparent',
+    borderRightColor: '#f72f6e',
+    borderTopColor: '#f72f6e',
+    borderBottomColor: '#f72f6e',
+
     margin: 8,
+  },
+
+  cardImage: {
+    height: 94,
+    width: 94,
+    borderRadius: 94 / 2,
   },
 
   cardElevated: {
