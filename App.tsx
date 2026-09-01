@@ -9,6 +9,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import FlatCard from './components/FlatCard';
 import ElevatedCards from './components/ElevatedCards';
 import FancyCard from './components/FancyCard';
+import ActionCard from './components/ActionCard';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -21,6 +22,7 @@ const App = () => {
           <FlatCard />
           <ElevatedCards />
           <FancyCard />
+          <ActionCard />
         </View>
       </ScrollView>
     </SafeAreaView>
