@@ -57,7 +57,7 @@ export default function ActionCard() {
           >
             <Text style={styles.socialLinks}>Follow me</Text>
           </TouchableOpacity>
-        </View>{' '}
+        </View>
       </View>
     </View>
   );
@@ -71,23 +71,51 @@ const styles = StyleSheet.create({
   },
   card: {
     width: 378,
-    height: 370,
+    height: 390,
     borderRadius: 8,
     marginVertical: 12,
     marginHorizontal: 16,
   },
   cardElevated: {
-    backgroundColor: '#eee',
+    backgroundColor: '#ee964b',
     elevation: 4,
-    shadowOffset: {},
+    shadowOffset: {
+      height: 1,
+      width: 1,
+    },
+    shadowColor: '#666',
+    shadowOpacity: 0.4,
+    shadowRadius: 2,
   },
-  headingContainer: {},
-  headerText: {},
+  headingContainer: {
+    height: 50,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerText: {
+    color: '#000',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
   cardImage: {
     height: 220,
   },
-  bodyContainer: {},
-  cardText: {},
-  footerContainer: {},
-  socialLinks: {},
+  bodyContainer: {
+    padding: 10,
+  },
+  cardText: {
+    color: '#fff',
+  },
+  footerContainer: {
+    padding: 8,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+  },
+  socialLinks: {
+    backgroundColor: '#fff',
+    paddingHorizontal: 20,
+    paddingVertical: 6,
+    borderRadius: 6,
+  },
 });
