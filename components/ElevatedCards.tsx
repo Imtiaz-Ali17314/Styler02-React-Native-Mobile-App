@@ -81,7 +81,11 @@ export default function ElevatedCards() {
         ElevatedCards
       </Text>
 
-      <ScrollView style={styles.container} horizontal={true}>
+      <ScrollView
+        style={styles.container}
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+      >
         {avatars.map(({ id, avatar }) => (
           <View key={id} style={[styles.card, styles.cardElevated]}>
             <Image source={{ uri: avatar }} style={styles.cardImage} />
