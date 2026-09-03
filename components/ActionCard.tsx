@@ -43,7 +43,7 @@ export default function ActionCard() {
           <TouchableOpacity
             onPress={() =>
               openWebsite(
-                'https://imtiaz-ali17314.github.io/Lumina-Developers-Smart-Image-Workspace-and-Live-Asset-Studio/',
+                'https://imtiazali.dev/',
               )
             }
           >

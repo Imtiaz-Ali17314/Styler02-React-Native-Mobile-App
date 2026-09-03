@@ -2,12 +2,12 @@
 
 ![React Native](https://img.shields.io/badge/React_Native-0.87.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Learning Journey](https://img.shields.io/badge/Project-2_of_10-FF6B6B?style=for-the-badge)
+![UI Design](https://img.shields.io/badge/Focus-Styling_%26_Layouts-FF6B6B?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-Welcome to **Styler**, the **2nd Project** in my **10-App React Native Mastery Series** (from Beginner to Advanced level)! 🚀
+Welcome to **Styler**, a hands-on React Native application designed for mastering mobile UI styling, component architecture, layout systems, cross-platform shadows, and interactive components.
 
-This project is dedicated to mastering **React Native Styling**, layout design using **Flexbox**, elevation & shadows, custom UI components, horizontal scroll views, dynamic dark mode support, and interactive touch elements with native linking.
+This project covers key practical concepts in React Native including **Flexbox**, custom cards (Flat, Elevated, Fancy, Action), horizontal scroll views, dynamic dark mode handling, image rendering, and native URL linking.
 
 ---
 
@@ -52,7 +52,7 @@ This project is structured into 5 decoupled, reusable UI components:
 
 ---
 
-## 💡 Core Styling Concepts Learned
+## 💡 Core Styling Concepts Covered
 
 - 📐 **Flexbox Layout Engine**: Mastering `flexDirection`, `justifyContent`, `alignItems`, `flexGrow`, and spacing utilities.
 - 🌓 **Dynamic Theme Awareness**: Utilizing React Native's `useColorScheme()` hook to handle dark and light themes gracefully.
