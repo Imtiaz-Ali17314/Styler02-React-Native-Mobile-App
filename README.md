@@ -1,97 +1,129 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🎨 Styler - React Native Styling & UI Components
 
-# Getting Started
+![React Native](https://img.shields.io/badge/React_Native-0.87.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Learning Journey](https://img.shields.io/badge/Project-2_of_10-FF6B6B?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+Welcome to **Styler**, the **2nd Project** in my **10-App React Native Mastery Series** (from Beginner to Advanced level)! 🚀
 
-## Step 1: Start Metro
+This project is dedicated to mastering **React Native Styling**, layout design using **Flexbox**, elevation & shadows, custom UI components, horizontal scroll views, dynamic dark mode support, and interactive touch elements with native linking.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+---
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 📱 App Previews
 
-```sh
-# Using npm
-npm start
+| Screenshot 1 | Screenshot 2 |
+| :---: | :---: |
+| ![App Preview 1](./assets/images/sty1.PNG) | ![App Preview 2](./assets/images/sty2.PNG) |
 
-# OR using Yarn
-yarn start
-```
+---
 
-## Step 2: Build and run your app
+## 🌟 Key Features & Components
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+This project is structured into 5 decoupled, reusable UI components:
 
-### Android
+### 1. 🟥 Flat Cards (`FlatCard.tsx`)
+* **Focus**: Flexbox fundamentals & layout direction.
+* Uses `flexDirection: 'row'` to align styled colored cards (Red, Green, Blue) horizontally.
+* Adapts text colors dynamically using `useColorScheme()` for dark/light mode compatibility.
 
-```sh
-# Using npm
-npm run android
+### 2. ⭕ Horizontal Elevated Cards (`ElevatedCards.tsx`)
+* **Focus**: Horizontal scrolling, avatars & elevation effects.
+* Implements horizontal `<ScrollView>` with `showsHorizontalScrollIndicator={false}`.
+* Renders circular profile avatars with custom border styling (`borderRightColor`, `borderTopColor`, etc.).
+* Demonstrates cross-platform drop shadow effects (`elevation` for Android, `shadowColor`/`shadowOffset`/`shadowOpacity`/`shadowRadius` for iOS).
 
-# OR using Yarn
-yarn android
-```
+### 3. 🏔️ Fancy Card (`FancyCard.tsx`)
+* **Focus**: Rich visual card design & remote images.
+* Features a travel showcase card ("Naran Lake, Pakistan") using the `<Image>` component with rounded top corners (`borderTopLeftRadius`, `borderTopRightRadius`).
+* Organizes content into structured typography layers (Title, Subtitle/Location, Description, Timestamp).
 
-### iOS
+### 4. 👥 Contact List (`ContactList.tsx`)
+* **Focus**: Data rendering & list UI layouts.
+* Iterates over a contacts array using `.map()` to generate user card rows.
+* Features circular avatar images, user titles, status indicators (*Available*, *Busy*, *Away*), and custom card backgrounds (`#43aa8b`).
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+### 5. 🔗 Action Card (`ActionCard.tsx`)
+* **Focus**: Interactivity, text truncation & native linking.
+* Modern blog post card layout showcasing "Web Design Trends 2026".
+* Uses `numberOfLines={3}` for clean multi-line text clamping.
+* Includes touchable buttons using `<TouchableOpacity>` that utilize `Linking.openURL()` to open external web links (Portfolio & LinkedIn).
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+---
 
-```sh
-bundle install
-```
+## 💡 Core Styling Concepts Learned
 
-Then, and every time you update your native dependencies, run:
+- 📐 **Flexbox Layout Engine**: Mastering `flexDirection`, `justifyContent`, `alignItems`, `flexGrow`, and spacing utilities.
+- 🌓 **Dynamic Theme Awareness**: Utilizing React Native's `useColorScheme()` hook to handle dark and light themes gracefully.
+- 🖼️ **Image Handling**: Working with local and remote URIs, rounded borders, avatar cropping, and dynamic dimensions.
+- 🌫️ **Shadows & Elevation**: Applying native depth using Android's `elevation` property and iOS's `shadow*` style properties.
+- 📜 **ScrollViews**: Handling vertical and horizontal scrollable containers without performance hitches.
+- 🌐 **Native Linking**: Interacting with external web URLs using `react-native` `Linking` API and user feedback touches (`TouchableOpacity`).
 
-```sh
-bundle exec pod install
-```
+---
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## 🛠️ Tech Stack & Dependencies
 
-```sh
-# Using npm
-npm run ios
+* **Framework**: [React Native 0.87.1](https://reactnative.dev/)
+* **Library**: React 19.2.3
+* **Language**: [TypeScript](https://www.typescriptlang.org/)
+* **Safe Area Handling**: `react-native-safe-area-context`
+* **Tooling**: Metro Bundler, Babel, ESLint, Prettier
 
-# OR using Yarn
-yarn ios
-```
+---
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 🚀 Getting Started
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+Follow these steps to get a local copy up and running on your machine:
 
-## Step 3: Modify your app
+### Prerequisites
 
-Now that you have successfully run the app, let's make changes!
+Ensure you have your React Native development environment set up. If not, follow the official [React Native Environment Setup](https://reactnative.dev/docs/set-up-your-environment) guide.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+* **Node.js**: `>= 22.11.0`
+* **npm** or **yarn**
+* **Android Studio** (for Android Emulator) / **Xcode** (for iOS Simulator - macOS only)
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+### Installation
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Imtiaz-Ali17314/Styler-App-React-Native.git
+   cd Styler-App-React-Native
+   ```
 
-## Congratulations! :tada:
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-You've successfully run and modified your React Native App. :partying_face:
+3. **Start the Metro Bundler**:
+   ```bash
+   npm start
+   ```
 
-### Now what?
+4. **Run on Android / iOS**:
+   - For **Android**:
+     ```bash
+     npm run android
+     ```
+   - For **iOS** (macOS only):
+     ```bash
+     bundle install
+     bundle exec pod install
+     npm run ios
+     ```
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+---
 
-# Troubleshooting
+## 👤 Author
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+**Imtiaz Ali**
+* **GitHub**: [@Imtiaz-Ali17314](https://github.com/Imtiaz-Ali17314)
+* **LinkedIn**: [Imtiaz Ali](https://www.linkedin.com/in/imtiaz-ali-79476a385/)
+* **Portfolio**: [imtiazali.dev](https://imtiazali.dev/)
 
-# Learn More
+---
 
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+⭐ *If you find this repository helpful, feel free to give it a star!*
